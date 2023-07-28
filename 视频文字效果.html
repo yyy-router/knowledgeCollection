@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <video src="./static/video.mp4" autoplay muted loop></video>
+        <div class="txt">hello world</div>
+    </div>
+    <!-- 混合模式属性的使用：
+      mix-blend-mode
+      f(颜色1，颜色2)=新颜色
+      screen：滤色模式----文字有一个白色就为白色，文字有一个黑色，就为背景色
+    -->
+</body>
+<style>
+    .container{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    video{
+        width: 100vmin;
+        height: 100vmin;
+    }
+    .txt{
+        position: absolute;
+        inset: 0;
+        background-color: #fff;
+        font-size: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        mix-blend-mode: screen;
+    }
+</style>
+</html>
