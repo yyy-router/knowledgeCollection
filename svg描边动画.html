@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <svg t="1690528476888" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        p-id="27051" width="100" height="100">
+        <path class="p"
+            d="M102.9632 122.5216m93.6448 0l629.0944 0q93.6448 0 93.6448 93.6448l0 447.4368q0 93.6448-93.6448 93.6448l-629.0944 0q-93.6448 0-93.6448-93.6448l0-447.4368q0-93.6448 93.6448-93.6448Z"
+            fill="#42B4FA" p-id="27052"></path>
+        <path class="p"
+            d="M511.1296 240.2304a199.68 199.68 0 1 0 199.68 199.68 199.68 199.68 0 0 0-199.68-199.68z m-44.032 224.6656a69.0688 69.0688 0 1 1 69.0688-69.0688A69.0688 69.0688 0 0 1 467.0976 464.896z"
+            fill="#FFFFFF" p-id="27053"></path>
+        <path class="p"
+            d="M790.9376 906.5472H244.0192a41.8304 41.8304 0 0 1 0-83.6096h546.9184a41.8304 41.8304 0 0 1 0 83.6096z"
+            fill="#92DBFF" p-id="27054"></path>
+    </svg>
+</body>
+<style>
+    .p {
+        fill: none;
+        stroke: aqua;
+        stroke-width: 20;
+        stroke-dasharray: var(--l);
+        stroke-dashoffset: var(--l);
+        animation: stroke 2s forwards;
+        stroke-linecap: round;
+    }
+
+    @keyframes stroke {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+</style>
+<script>
+    //动态获取路径长度，为每个路径元素设置--l属性
+    const paths = document.querySelectorAll(".icon .p");
+    paths.forEach(path => {
+        const len = path.getTotalLength();
+        path.style.setProperty('--l', len);
+    })
+</script>
+
+</html>
